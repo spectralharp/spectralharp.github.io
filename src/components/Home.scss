@@ -1,0 +1,119 @@
+@import '../styles/_variables';
+
+.home {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  &__title {
+
+    position: absolute;
+    left: 0;
+    bottom: 12.5vw;
+
+    margin: 0;
+
+    line-height: 0.8;
+
+    transform: rotateZ(-12deg);
+
+
+    mix-blend-mode: exclusion;
+  }
+
+  &__rule {
+    margin: 0;
+    margin-left: -50vw;
+    border: none;
+    height: 2px;
+    width:  200vw;
+    background-color: $light;
+    animation: expand 1s ease;
+  }
+
+  &__title-top, &__title-bot {
+    display: block;
+
+    margin:  0;
+    padding: 0;
+
+    color: $light;
+    font-size: min(50vh, 30vw);
+    letter-spacing: -2vw;
+
+    transition: color 0.2s ease;
+  }
+
+  &__title-bot { animation: right-to-left 1s ease; }
+  &__title-top { animation: left-to-right 1s ease; }
+  &__title-bot:hover, &__title-bot:focus { color: #279af1; }
+  &__title-top:hover, &__title-top:focus { color: #f12796; }
+
+  &__subtitle {
+    font-size: 20px;
+    letter-spacing: 0.1rem;
+  }
+
+  &__moon {
+    position: fixed;
+    top:  15rem;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    width:      75vw;
+    height:     75vw;
+    max-width:  300px;
+    max-height: 300px;
+
+    mix-blend-mode: exclusion;
+
+    background-image:    url('../images/moon.png');
+    background-position: center;
+    background-repeat:   no-repeat;
+    background-size:     contain;
+
+    animation: fade-in 1s ease;
+  }
+
+}
+
+@keyframes expand {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes left-to-right {
+  from {
+    opacity: 0;
+    transform: translate3d(-100vw, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes right-to-left {
+  from {
+    opacity: 0;
+    transform: translate3d(100vw, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

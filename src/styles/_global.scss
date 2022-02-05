@@ -1,0 +1,29 @@
+@use '../styles/_variables' as var;
+
+.title {
+  font-family: var.$title-font-family;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.bold-link {
+  @extend .title;
+  color: var.$light;
+  text-decoration: none;
+
+  transition: color 0.2s;
+
+  &:focus-visible {
+    color: var.$primary;
+    outline: var.$focus-outline;
+  }
+
+  &:hover {
+    color: var.$primary;
+  }
+}
+
+h1, h2, h3, h4, p {
+  mix-blend-mode: exclusion;
+}

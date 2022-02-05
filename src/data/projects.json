@@ -1,0 +1,47 @@
+{
+  "timeline": {
+    "projectImage": "/images/projects/dldialogue/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
+    "headerImage": "/images/projects/dldialogue/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
+    "theme": "#eee",
+    "title": {
+      "en": "Timeline",
+      "zh_tw": "時間線"
+    },
+    "snippet": {
+      "en": "A tool that keeps track of daily events in different time zones",
+      "zh_tw": "龍絆對話畫面生成器"
+    },
+    "description": {
+      "en": "A tool that keeps track of daily events in different time zones",
+      "zh_tw": "龍絆對話畫面生成器"
+    },
+    "link": "https://spam.bychao.com/timeline",
+    "screenshots": [
+      "/images/projects/dldialogue/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
+      "/images/projects/dldialogue/Screenshot 2022-02-05 at 20-28-26 Timeline.png"
+    ],
+    "tags": ["html", "sass", "js", "react", "luxon"]
+  },
+  "dldialogue": {
+    "projectImage": "/images/projects/dldialogue/Screenshot 2022-01-16 at 14-41-48 Dragalia Lost Dialogue Screen Generator.png",
+    "headerImage": "/images/projects/dldialogue/Screenshot 2022-01-16 at 14-41-48 Dragalia Lost Dialogue Screen Generator.png",
+    "theme": "#eee",
+    "title": {
+      "en": "Dragalia Lost Dialogue Screen Generator",
+      "zh_tw": "龍絆對話畫面生成器"
+    },
+    "snippet": {
+      "en": "A tool for making or generating dialogue screens from Dragalia Lost",
+      "zh_tw": "龍絆對話畫面生成器"
+    },
+    "description": {
+      "en": "A tool for making or generating dialogue screens from Dragalia Lost",
+      "zh_tw": "龍絆對話畫面生成器"
+    },
+    "link": "https://dldialogue.xyz/",
+    "screenshots": [
+      "/images/projects/dldialogue/Screenshot 2022-01-16 at 14-41-48 Dragalia Lost Dialogue Screen Generator.png"
+    ],
+    "tags": ["html", "css", "js", "react"]
+  }
+}

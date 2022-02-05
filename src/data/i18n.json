@@ -1,0 +1,26 @@
+{
+  "en": {
+    "code" : "en_us",
+    "bcp47" : "en",
+    "loc": {
+      "title" : "Chao Hsu Lin | Portfolio",
+      "about": "About",
+      "projects": "Projects",
+      "games": "Games",
+      "linkToProject": "Link",
+      "homeTitle": "Chao's Portfolio"
+    }
+  },
+  "zh_tw": {
+    "code" : "zh_tw",
+    "bcp47" : "zh-Hant-TW",
+    "loc": {
+      "title" : "林釗緒 | 作品集",
+      "about": "關於我",
+      "projects": "作品",
+      "games": "遊戲",
+      "linkToProject": "前往作品",
+      "homeTitle": "林釗緒的線上作品集"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "html": {
+    "name": "HTML",
+    "color": "#e34c26"
+  },
+  "css": {
+    "name": "CSS",
+    "color": "#563d7c"
+  },
+  "js": {
+    "name": "JavaScript",
+    "color": "#f1e05a"
+  },
+  "sass": {
+    "name": "Sass",
+    "color": "#4F5D95"
+  },
+  "csharp": {
+    "name": "C#",
+    "color": "#178600"
+  },
+  "java": {
+    "name": "Java",
+    "color": "#b07219"
+  },
+  "vue": {
+    "name": "Vue",
+    "color": "#2c3e50"
+  },
+  "react": {
+    "name": "React",
+    "color": "#61dafb"
+  },
+  "node": {
+    "name": "Node.js",
+    "color": "#43853d"
+  },
+  "unity": {
+    "name": "Unity",
+    "color": "#eee"
+  }
+}

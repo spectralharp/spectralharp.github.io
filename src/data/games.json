@@ -1,0 +1,233 @@
+{
+  "chaos_collection": {
+    "projectImage": "/images/games/chaos_collection/project.png",
+    "headerImage": "/images/games/chaos_collection/header.png",
+    "logoImage": "/images/games/chaos_collection/logo.png",
+    "theme": "#ffe569",
+    "title": {
+      "en": "Chao's Collection of Random Games",
+      "zh_tw": "Chao的奇異遊戲合集"
+    },
+    "snippet": {
+      "en": "A collection of all my game jam games",
+      "zh_tw": "過去製作過的各式各樣的遊戲合集"
+    },
+    "description": {
+      "en": "A collection of games including a 2D and a 3D pinball platformer, a tower defense game, a generic turn-based RPG, an RTS game, a puzzle based platformer etc.",
+      "zh_tw": "這是我在過去幾年中製作的遊戲合集"
+    },
+    "link": "https://games.bychao.com/Chaos_Collection_of_Random_Games/",
+    "screenshots": [
+      "/images/games/hyperrealistic_baseball_ii/Screenshot_20211002_010444_316.png",
+      "/images/games/hyperrealistic_baseball_ii/Screenshot_20211124_075429_086.png",
+      "/images/games/hyperrealistic_baseball_iii/hrb3.png",
+      "/images/games/hyperrealistic_baseball_iii/Screenshot_20211124_074547_225.png",
+      "/images/games/hyperrealistic_baseball_iii/Screenshot_20211124_074845_624.png",
+      "/images/games/hyperrealistic_baseball_iii/Screenshot_20211124_075008_990.png",
+      "/images/games/wipts/Screenshot_20210828_044101_157.png",
+      "/images/games/devoid/Screenshot_20210830_045727_007.png",
+      "/images/games/devoid/Screenshot_20211124_083921_366.png",
+      "/images/games/flourish_regrowth/Screenshot_20211124_081353_845.png",
+      "/images/games/flourish_regrowth/Screenshot_20211124_082332_157.png",
+      "/images/games/cats_explosions_and_extra_cheese/Screenshot_20211124_082633_722.png",
+      "/images/games/cats_explosions_and_extra_cheese/Screenshot_20211124_083040_254.png",
+      "/images/games/priklepal/Screenshot_20211124_083412_735.png",
+      "/images/games/priklepal/Screenshot_20211124_083615_200.png"
+    ],
+    "tags": ["unity", "csharp"]
+  },
+  "hyperrealistic_baseball_ii": {
+    "projectImage": "/images/games/hyperrealistic_baseball_ii/cover_hrb2.png",
+    "headerImage": "/images/games/hyperrealistic_baseball_ii/bg1.png",
+    "logoImage": "/images/games/hyperrealistic_baseball_ii/hyperrealisticbaseballii.png",
+    "theme": "white",
+    "title": {
+      "en": "Hyperrealistic Baseball II",
+      "zh_tw": "超寫實棒球II"
+    },
+    "snippet": {
+      "en": "2D Pinball game where you play baseball in space",
+      "zh_tw": "在外太空打棒球的2D彈珠台遊戲"
+    },
+    "description": {
+      "en": "Defeat the evil umpires, pitchers, and sentient gloves! Hyperrealistic Baseball II is a 2D Pinball Platformer where your goal is to get the ball to the top of the world with the help of your bat and oversized arm",
+      "zh_tw": "打敗邪惡的裁判、投手、和手套吧！超寫實棒球II是一款以將球打擊到世界的最高處為目標的2D彈射平台遊戲。"
+    },
+    "link": "https://spectralharp.itch.io/hyperrealistic-baseball-ii/",
+    "screenshots": [
+      "/images/games/hyperrealistic_baseball_ii/Screenshot_20211002_010444_316.png",
+      "/images/games/hyperrealistic_baseball_ii/Screenshot_20211124_075429_086.png"
+    ],
+    "tags": ["unity", "csharp"]
+  },
+  "hyperrealistic_baseball_iii": {
+    "projectImage": "/images/games/hyperrealistic_baseball_iii/cover_hrb3.png",
+    "headerImage": "/images/games/hyperrealistic_baseball_iii/hrb3.png",
+    "logoImage": "/images/games/hyperrealistic_baseball_iii/hyperrealisticbaseballiii.png",
+    "theme": "white",
+    "title": {
+      "en": "Hyperrealistic Baseball III",
+      "zh_tw": "超寫實棒球III"
+    },
+    "snippet": {
+      "en": "3D Pinball game where you play baseball in space",
+      "zh_tw": "在外太空打棒球的3D動作平台遊戲"
+    },
+    "description": {
+      "en": "Defeat the evil umpires, pitchers, and sentient gloves! Hyperrealistic Baseball III is a 3D Platformer where your goal is to get the ball to the top of the world with the help of your bat.",
+      "zh_tw": "打敗邪惡的裁判、投手、和手套吧！超寫實棒球III是一款以將球打擊到世界的最高處為目標的3D平台遊戲。"
+    },
+    "link": "https://spectralharp.itch.io/hyperrealistic-baseball-iii/",
+    "screenshots": [
+      "/images/games/hyperrealistic_baseball_iii/hrb3.png",
+      "/images/games/hyperrealistic_baseball_iii/Screenshot_20211124_074547_225.png",
+      "/images/games/hyperrealistic_baseball_iii/Screenshot_20211124_074845_624.png",
+      "/images/games/hyperrealistic_baseball_iii/Screenshot_20211124_075008_990.png"
+    ],
+    "tags": ["unity", "csharp"]
+  },
+  "wipts": {
+    "projectImage": "/images/games/wipts/cover_wipts.png",
+    "headerImage": "/images/games/wipts/wiptsbg.png",
+    "logoImage": "/images/games/wipts/wipts.png",
+    "theme": "white",
+    "title": {
+      "en": "Wipts",
+      "zh_tw": "半成品標題畫面"
+    },
+    "snippet": {
+      "en": "Cat Tower Defense where you push towers",
+      "zh_tw": "用貓推動砲塔的塔防遊戲"
+    },
+    "description": {
+      "en": "Build towers to hold off the enemies! Work in Progress Title Screen is a tower defense where you build and combine different parts to make cannons (and some not-cannons) to defeat enemies with different move patterns. However, towers are limited, so you have to move them from time to time in order to cover enemies from all angles.",
+      "zh_tw": "建造各式各樣的砲塔(和一些非砲塔)來抵抗敵人吧！半成品標題畫面是一款以各式各樣的砲塔來擊敗敵人為目標的遊戲。在砲塔有限的情況下，有時甚至需要將砲塔移動到不同的位置來抵擋各方的攻擊。"
+    },
+    "link": "https://spectralharp.itch.io/wipts",
+    "screenshots": [
+      "/images/games/wipts/Screenshot_20210828_044101_157.png"
+    ],
+    "tags": ["unity", "csharp"]
+  },
+  "devoid": {
+    "projectImage": "/images/games/devoid/cover_devoid.png",
+    "logoImage": "/images/games/devoid/devoid.png",
+    "theme": "white",
+    "title": {
+      "en": "Devoid",
+      "zh_tw": "空無"
+    },
+    "snippet": {
+      "en": "Ghost platformer where you explore the void",
+      "zh_tw": "幽靈探索黑暗的2D平台遊戲"
+    },
+    "description": {
+      "en": "Become a soul keeper! Devoid is a 2D platformer where you collect souls by exploring and solving puzzles. The game behaves like a platformer when you're in the white zone, but when you enter the black zone, you become a ghost and you are able to float freely around the stage.",
+      "zh_tw": "成為靈魂的管理者吧！空無是一款已收集失散於各地的靈魂為目標的2D解謎遊戲。在白色的區域中，角色的行動方式和一般的平台遊戲非常相近，而進入黑色的區域時則會進入靈體狀態，像幽靈一般的漂浮移動。"
+    },
+    "link": "https://spectralharp.itch.io/devoid/",
+    "screenshots": [
+      "/images/games/devoid/Screenshot_20210830_045727_007.png",
+      "/images/games/devoid/Screenshot_20211124_083921_366.png"
+    ],
+    "tags": ["unity", "csharp"]
+  },
+  "flourish": {
+    "projectImage": "/images/games/flourish/cover_flourish.png",
+    "headerImage": "/images/games/flourish/flourishbg.png",
+    "logoImage": "/images/games/flourish/flourish.png",
+    "theme": "white",
+    "title": {
+      "en": "Flourish!",
+      "zh_tw": "花開！"
+    },
+    "snippet": {
+      "en": "A turn-based RPG about growth",
+      "zh_tw": "需要栽培角色的回合制RPG遊戲"
+    },
+    "description": {
+      "en": "Grow your party and fight against evil! Flourish! is a turn based RPG where you grow your party during combat, literally. Whenever a floewer dies, they will drop seeds that can be watered and grown into a party member. Use magic to enhance your floewers and out live your enemies!",
+      "zh_tw": "培養花花們來對抗邪惡的勢力吧！花開！是一款需要好好「栽培」你的隊伍的回合制RPG。當花花戰敗時，他們將留下能澆水培養為更多夥伴的種子。依指數性成長，利用魔法改變夥伴的特性來獲得勝利吧。"
+    },
+    "link": "https://spectralharp.itch.io/flourish/",
+    "screenshots": [
+      "/images/games/flourish/Screenshot_20211002_012627_316.png",
+      "/images/games/flourish/Screenshot_20211124_080135_101.png",
+      "/images/games/flourish/Screenshot_20211124_080220_033.png",
+      "/images/games/flourish/Screenshot_20211124_080240_966.png"
+    ],
+    "tags": ["unity", "csharp"]
+  },
+  "flourish_regrowth": {
+    "projectImage": "/images/games/flourish_regrowth/cover_flourishregrowth.png",
+    "headerImage": "/images/games/flourish_regrowth/flourishrgBG.png",
+    "logoImage": "/images/games/flourish_regrowth/flourishregrowth.png",
+    "theme": "white",
+    "title": {
+      "en": "Flourish!! Regrowth★",
+      "zh_tw": "花開！！大集合★"
+    },
+    "snippet": {
+      "en": "An real-time strategy game about growth",
+      "zh_tw": "需要栽培角色的RTS遊戲"
+    },
+    "description": {
+      "en": "Grow your army and defend against the waves of enemies! Flourish!! Regrowth is a real time strategy game where you grow your army, literally. Whenever a floewer dies, they will drop seeds that can be watered and grown into more units. Collect resources and construct buildings to fend off the enemies!",
+      "zh_tw": "培養花花們來對抗邪惡的勢力吧！花開！！重生吧是一款需要好好「栽培」你的軍隊的即時戰略遊戲。當花花死亡時，他們將留下可以澆水培養為更多夥伴的種子。依指數性成長，收集資源，建造防禦來阻擋不斷侵襲的敵人吧。"
+    },
+    "link": "https://spectralharp.itch.io/flourish-regrowth/",
+    "screenshots": [
+      "/images/games/flourish_regrowth/Screenshot_20211124_081353_845.png",
+      "/images/games/flourish_regrowth/Screenshot_20211124_082332_157.png"
+    ],
+    "tags": ["unity", "csharp"]
+  },
+  "cats_explosions_and_extra_cheese": {
+    "projectImage": "/images/games/cats_explosions_and_extra_cheese/cover_ceaec.png",
+    "headerImage": "/images/games/cats_explosions_and_extra_cheese/ceaecbg.png",
+    "logoImage": "/images/games/cats_explosions_and_extra_cheese/ceaec.png",
+    "theme": "white",
+    "title": {
+      "en": "Cats, Explosions, and Extra Cheese",
+      "zh_tw": "貓，爆炸，與加倍起司"
+    },
+    "snippet": {
+      "en": "2D Top Down Mouse Nibbler",
+      "zh_tw": "2D吃起司遊戲"
+    },
+    "description": {
+      "en": "Command the swarm of rats! Cats, Explosions, and Extra Cheese is a 2D top down nibbler where you make things explode with rats. Nibble down the cheese you get from defeating enemies and grow your rat army!",
+      "zh_tw": "指揮鼠鼠們吧！貓、爆炸、與加倍起司是一款2D的啃啃遊戲。指揮不斷地增加的鼠鼠們把地圖裡的所有東西都吃爆吧。"
+    },
+    "link": "https://spectralharp.itch.io/cats-explosions-and-extra-cheese/",
+    "screenshots": [
+      "/images/games/cats_explosions_and_extra_cheese/Screenshot_20211124_082633_722.png",
+      "/images/games/cats_explosions_and_extra_cheese/Screenshot_20211124_083040_254.png"
+    ],
+    "tags": ["unity", "csharp"]
+  },
+  "priklepal": {
+    "projectImage": "/images/games/priklepal/cover_priklepal.png",
+    "headerImage": "/images/games/priklepal/priklepalbg.png",
+    "logoImage": "/images/games/priklepal/priklepal.png",
+    "theme": "white",
+    "title": {
+      "en": "Priklepal",
+      "zh_tw": "普利克帕"
+    },
+    "snippet": {
+      "en": "Top-down suicidal robot shooter",
+      "zh_tw": "自殺性機器人射擊遊戲"
+    },
+    "description": {
+      "en": "Help a robot who crash landed on a strange planet, and needs to rebuild its ship to get home! Priklepal is a 2D top-down shooter game where you must avoid the projectiles you launch yourself.",
+      "zh_tw": "幫助不幸失事墜落到了奇異星球的機器人重建火箭來回到家鄉吧！普利克帕是一款必須要避開自己發射的彈幕的2D射擊遊戲。"
+    },
+    "link": "https://dldialogue.xyz/",
+    "screenshots": [
+      "/images/games/priklepal/Screenshot_20211124_083412_735.png",
+      "/images/games/priklepal/Screenshot_20211124_083615_200.png"
+    ],
+    "tags": ["unity", "csharp"]
+  }
+}

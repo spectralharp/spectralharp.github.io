@@ -1,0 +1,26 @@
+@import '../styles/_variables';
+
+.footer {
+  margin:  1rem 0;
+  padding: 0    1rem;
+
+  display: flex;
+
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__info {
+    margin-bottom: 1rem;
+  }
+
+  &__social {
+    margin-left: 1rem;
+    padding-left: 1rem;
+    border-left: 4px solid $light;
+  }
+
+  &__social-link {
+    display: block;
+    margin: 0.75rem 0;
+  }
+}
