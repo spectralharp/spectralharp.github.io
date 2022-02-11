@@ -17,7 +17,7 @@ import {
 } from 'react';
 
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from 'react-router-dom';
@@ -60,7 +60,7 @@ export default function App() {
   );
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <a className='skip-navigation bold-link' href='#mainContent'>Skip Navigation</a>
       <Background />
       <NavBar pageLang={pageLang} />
@@ -97,7 +97,7 @@ export default function App() {
         changePageLanguage={cpl}
         pageLang={pageLang}
       />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
