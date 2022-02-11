@@ -13,7 +13,7 @@
   },
   "sass": {
     "name": "Sass",
-    "color": "#4F5D95"
+    "color": "#c6538c"
   },
   "csharp": {
     "name": "C#",
@@ -25,7 +25,7 @@
   },
   "vue": {
     "name": "Vue",
-    "color": "#2c3e50"
+    "color": "#41b883"
   },
   "react": {
     "name": "React",
@@ -37,6 +37,6 @@
   },
   "unity": {
     "name": "Unity",
-    "color": "#eee"
+    "color": "#222c37"
   }
 }

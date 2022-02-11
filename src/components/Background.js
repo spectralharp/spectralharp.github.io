@@ -40,7 +40,7 @@ export default function Home() {
   }, []);
 
   return (
-    <canvas width='1920' height='1080' ref={canvasRef} aria-label='background canvas with animated stars'></canvas>
+    <canvas width='1920' height='1080' ref={canvasRef} aria-hidden></canvas>
   );
 }
 

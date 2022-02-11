@@ -12,25 +12,49 @@ function NavBar({pageLang}) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className='nav-wrapper'>
-      <nav className='nav'>
-        <Link to='/'><img src={logo} alt='logo' className='nav__brand'/></Link>
+    <div className="nav-wrapper">
+      <nav className="nav">
+        <Link to="/">
+          <img className="nav__brand" src={logo} alt="logo"/>
+        </Link>
+
         <button
-          className='nav__menu-toggle'
+          className="nav__menu-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label='open navigation menu'
+          aria-label="open navigation menu"
         >
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <ul className={`nav__links ${menuOpen ? 'active' : ''}`}>
-          <li className='nav__links-item'>
-            <Link className='bold-link' to='/about' onClick={() => setMenuOpen(false)}>{i18n[pageLang].loc.about}</Link>
+
+        <ul className={`nav__links ${menuOpen ? "active" : ""}`}>
+          <li className="nav__links-item">
+            <Link
+              className="bold-link"
+              to="/about"
+              onClick={() => setMenuOpen(false)}
+            >
+              {i18n[pageLang].loc.about}
+            </Link>
           </li>
-          <li className='nav__links-item'>
-            <Link className='bold-link' to='/projects' onClick={() => setMenuOpen(false)}>{i18n[pageLang].loc.projects}</Link>
+
+          <li className="nav__links-item">
+            <Link
+              className="bold-link"
+              to="/projects"
+              onClick={() => setMenuOpen(false)}
+            >
+              {i18n[pageLang].loc.projects}
+            </Link>
           </li>
-          <li className='nav__links-item'>
-            <Link className='bold-link' to='/games' onClick={() => setMenuOpen(false)}>{i18n[pageLang].loc.games}</Link>
+
+          <li className="nav__links-item">
+            <Link
+              className="bold-link"
+              to="/games"
+              onClick={() => setMenuOpen(false)}
+            >
+              {i18n[pageLang].loc.games}
+            </Link>
           </li>
         </ul>
       </nav>

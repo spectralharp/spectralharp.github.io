@@ -1,0 +1,10 @@
+@use '../styles/_variables' as var;
+
+.about {
+  &__profile {
+    width: 200px;
+    height: 200px;
+    padding: 8px;
+    border: 4px dashed var.$light;
+  }
+}

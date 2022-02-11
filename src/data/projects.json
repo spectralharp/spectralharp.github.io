@@ -1,7 +1,7 @@
 {
   "timeline": {
-    "projectImage": "/images/projects/dldialogue/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
-    "headerImage": "/images/projects/dldialogue/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
+    "projectImage": "/images/projects/timeline/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
+    "headerImage": "/images/projects/timeline/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
     "theme": "#eee",
     "title": {
       "en": "Timeline",
@@ -17,13 +17,13 @@
     },
     "link": "https://spam.bychao.com/timeline",
     "screenshots": [
-      "/images/projects/dldialogue/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
-      "/images/projects/dldialogue/Screenshot 2022-02-05 at 20-28-26 Timeline.png"
+      "/images/projects/timeline/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
+      "/images/projects/timeline/Screenshot 2022-02-05 at 20-28-26 Timeline.png"
     ],
     "tags": ["html", "sass", "js", "react", "luxon"]
   },
   "dldialogue": {
-    "projectImage": "/images/projects/dldialogue/Screenshot 2022-01-16 at 14-41-48 Dragalia Lost Dialogue Screen Generator.png",
+    "projectImage": "/images/projects/dldialogue/og-thumbnail.png",
     "headerImage": "/images/projects/dldialogue/Screenshot 2022-01-16 at 14-41-48 Dragalia Lost Dialogue Screen Generator.png",
     "theme": "#eee",
     "title": {
