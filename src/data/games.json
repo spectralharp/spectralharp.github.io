@@ -1,6 +1,7 @@
 {
   "chaos_collection": {
     "projectImage": "/images/games/chaos_collection/project.png",
+    "projectImageSize": { "width": 630, "height": 500 },
     "headerImage": "/images/games/chaos_collection/header.png",
     "logoImage": "/images/games/chaos_collection/logo.png",
     "theme": "#ffe569",
@@ -36,32 +37,9 @@
     ],
     "tags": ["unity", "csharp"]
   },
-  "hyperrealistic_baseball_ii": {
-    "projectImage": "/images/games/hyperrealistic_baseball_ii/cover_hrb2.png",
-    "headerImage": "/images/games/hyperrealistic_baseball_ii/bg1.png",
-    "logoImage": "/images/games/hyperrealistic_baseball_ii/hyperrealisticbaseballii.png",
-    "theme": "white",
-    "title": {
-      "en": "Hyperrealistic Baseball II",
-      "zh_tw": "超寫實棒球II"
-    },
-    "snippet": {
-      "en": "2D Pinball game where you play baseball in space",
-      "zh_tw": "在外太空打棒球的2D彈珠台遊戲"
-    },
-    "description": {
-      "en": "Defeat the evil umpires, pitchers, and sentient gloves! Hyperrealistic Baseball II is a 2D Pinball Platformer where your goal is to get the ball to the top of the world with the help of your bat and oversized arm",
-      "zh_tw": "打敗邪惡的裁判、投手、和手套吧！超寫實棒球II是一款以將球打擊到世界的最高處為目標的2D彈射平台遊戲。"
-    },
-    "link": "https://spectralharp.itch.io/hyperrealistic-baseball-ii/",
-    "screenshots": [
-      "/images/games/hyperrealistic_baseball_ii/Screenshot_20211002_010444_316.png",
-      "/images/games/hyperrealistic_baseball_ii/Screenshot_20211124_075429_086.png"
-    ],
-    "tags": ["unity", "csharp"]
-  },
   "hyperrealistic_baseball_iii": {
     "projectImage": "/images/games/hyperrealistic_baseball_iii/cover_hrb3.png",
+    "projectImageSize": { "width": 630, "height": 500 },
     "headerImage": "/images/games/hyperrealistic_baseball_iii/hrb3.png",
     "logoImage": "/images/games/hyperrealistic_baseball_iii/hyperrealisticbaseballiii.png",
     "theme": "white",
@@ -86,8 +64,34 @@
     ],
     "tags": ["unity", "csharp"]
   },
+  "hyperrealistic_baseball_ii": {
+    "projectImage": "/images/games/hyperrealistic_baseball_ii/cover_hrb2.png",
+    "projectImageSize": { "width": 630, "height": 500 },
+    "headerImage": "/images/games/hyperrealistic_baseball_ii/bg1.png",
+    "logoImage": "/images/games/hyperrealistic_baseball_ii/hyperrealisticbaseballii.png",
+    "theme": "white",
+    "title": {
+      "en": "Hyperrealistic Baseball II",
+      "zh_tw": "超寫實棒球II"
+    },
+    "snippet": {
+      "en": "2D Pinball game where you play baseball in space",
+      "zh_tw": "在外太空打棒球的2D彈珠台遊戲"
+    },
+    "description": {
+      "en": "Defeat the evil umpires, pitchers, and sentient gloves! Hyperrealistic Baseball II is a 2D Pinball Platformer where your goal is to get the ball to the top of the world with the help of your bat and oversized arm",
+      "zh_tw": "打敗邪惡的裁判、投手、和手套吧！超寫實棒球II是一款以將球打擊到世界的最高處為目標的2D彈射平台遊戲。"
+    },
+    "link": "https://spectralharp.itch.io/hyperrealistic-baseball-ii/",
+    "screenshots": [
+      "/images/games/hyperrealistic_baseball_ii/Screenshot_20211002_010444_316.png",
+      "/images/games/hyperrealistic_baseball_ii/Screenshot_20211124_075429_086.png"
+    ],
+    "tags": ["unity", "csharp"]
+  },
   "wipts": {
     "projectImage": "/images/games/wipts/cover_wipts.png",
+    "projectImageSize": { "width": 630, "height": 500 },
     "headerImage": "/images/games/wipts/wiptsbg.png",
     "logoImage": "/images/games/wipts/wipts.png",
     "theme": "white",
@@ -111,8 +115,9 @@
   },
   "devoid": {
     "projectImage": "/images/games/devoid/cover_devoid.png",
+    "projectImageSize": { "width": 630, "height": 500 },
     "logoImage": "/images/games/devoid/devoid.png",
-    "theme": "white",
+    "theme": "transparent",
     "title": {
       "en": "Devoid",
       "zh_tw": "空無"
@@ -134,6 +139,7 @@
   },
   "flourish": {
     "projectImage": "/images/games/flourish/cover_flourish.png",
+    "projectImageSize": { "width": 630, "height": 500 },
     "headerImage": "/images/games/flourish/flourishbg.png",
     "logoImage": "/images/games/flourish/flourish.png",
     "theme": "white",
@@ -160,6 +166,7 @@
   },
   "flourish_regrowth": {
     "projectImage": "/images/games/flourish_regrowth/cover_flourishregrowth.png",
+    "projectImageSize": { "width": 630, "height": 500 },
     "headerImage": "/images/games/flourish_regrowth/flourishrgBG.png",
     "logoImage": "/images/games/flourish_regrowth/flourishregrowth.png",
     "theme": "white",
@@ -172,8 +179,8 @@
       "zh_tw": "需要栽培角色的RTS遊戲"
     },
     "description": {
-      "en": "Grow your army and defend against the waves of enemies! Flourish!! Regrowth is a real time strategy game where you grow your army, literally. Whenever a floewer dies, they will drop seeds that can be watered and grown into more units. Collect resources and construct buildings to fend off the enemies!",
-      "zh_tw": "培養花花們來對抗邪惡的勢力吧！花開！！重生吧是一款需要好好「栽培」你的軍隊的即時戰略遊戲。當花花死亡時，他們將留下可以澆水培養為更多夥伴的種子。依指數性成長，收集資源，建造防禦來阻擋不斷侵襲的敵人吧。"
+      "en": "Grow your army and defend against the waves of enemies! Flourish!! Regrowth is a real time strategy game where you grow your army, literally. Whenever a floewer dies, they will drop seeds that can be watered and grown into more units. Collect resources and construct buildings to fend off the enemies! \nMade during the Tri-Campus Jam hosted by University of Washington Bothell, Seattle, and Tacoma's game development clubs, in Summer 2021. This is the last game I've made in game jams hosted by UW before I graduated. Special thanks to all the cool friends at GDC over the years! \nThis is a spinoff from one of my previous games, Flourish!",
+      "zh_tw": "培養花花們來對抗邪惡的勢力吧！花開！！重生吧是一款需要好好「栽培」你的軍隊的即時戰略遊戲。當花花死亡時，他們將留下可以澆水培養為更多夥伴的種子。依指數性成長，收集資源，建造防禦來阻擋不斷侵襲的敵人吧。\n於華盛頓大學三大校區的遊戲設計社團2021夏季舉辦的Game Jam中製作的小遊戲。這是我在從華大畢業以前參加過的最後一場Game Jam。這邊想要感謝一下這些年來我在社團中結交的好朋友們，帶給了我許多美好的回憶。\n這款遊戲是之前花開的衍生作品，讓花花又再登場了一次。"
     },
     "link": "https://spectralharp.itch.io/flourish-regrowth/",
     "screenshots": [
@@ -184,6 +191,7 @@
   },
   "cats_explosions_and_extra_cheese": {
     "projectImage": "/images/games/cats_explosions_and_extra_cheese/cover_ceaec.png",
+    "projectImageSize": { "width": 630, "height": 500 },
     "headerImage": "/images/games/cats_explosions_and_extra_cheese/ceaecbg.png",
     "logoImage": "/images/games/cats_explosions_and_extra_cheese/ceaec.png",
     "theme": "white",
@@ -196,8 +204,8 @@
       "zh_tw": "2D吃起司遊戲"
     },
     "description": {
-      "en": "Command the swarm of rats! Cats, Explosions, and Extra Cheese is a 2D top down nibbler where you make things explode with rats. Nibble down the cheese you get from defeating enemies and grow your rat army!",
-      "zh_tw": "指揮鼠鼠們吧！貓、爆炸、與加倍起司是一款2D的啃啃遊戲。指揮不斷地增加的鼠鼠們把地圖裡的所有東西都吃爆吧。"
+      "en": "Command the swarm of rats! Cats, Explosions, and Extra Cheese is a 2D top down nibbler where you make things explode with rats. Nibble down the cheese you get from defeating enemies and grow your rat army! \nMade during the University of Washington Game Development Club's rat themed game jam in Summer 2020. \nDespite the fact that I like drawing cute anime girls, this is about the only game I've made that features cute anime girls.",
+      "zh_tw": "指揮鼠鼠們吧！貓、爆炸、與加倍起司是一款2D的啃啃遊戲。指揮不斷地增加的鼠鼠們把地圖裡的所有東西都吃爆吧。\n於華盛頓大學遊戲設計社團2020夏季舉辦的Game Jam中製作的小遊戲。\n雖然我平常就很喜歡畫日系的美少女，不過這大概是我唯一做過有日系少女的一款遊戲。"
     },
     "link": "https://spectralharp.itch.io/cats-explosions-and-extra-cheese/",
     "screenshots": [
@@ -208,6 +216,7 @@
   },
   "priklepal": {
     "projectImage": "/images/games/priklepal/cover_priklepal.png",
+    "projectImageSize": { "width": 630, "height": 500 },
     "headerImage": "/images/games/priklepal/priklepalbg.png",
     "logoImage": "/images/games/priklepal/priklepal.png",
     "theme": "white",
@@ -220,10 +229,10 @@
       "zh_tw": "自殺性機器人射擊遊戲"
     },
     "description": {
-      "en": "Help a robot who crash landed on a strange planet, and needs to rebuild its ship to get home! Priklepal is a 2D top-down shooter game where you must avoid the projectiles you launch yourself.",
-      "zh_tw": "幫助不幸失事墜落到了奇異星球的機器人重建火箭來回到家鄉吧！普利克帕是一款必須要避開自己發射的彈幕的2D射擊遊戲。"
+      "en": "Help a robot who crash landed on a strange planet, and needs to rebuild its ship to get home! Priklepal is a 2D top-down shooter game where you must avoid the projectiles you launch yourself. \n Made during the University of Washington Game Development Club's prickly themed game jam in Fall 2018. This is my first game jam and the game is the first game I've ever \"finished\" making.",
+      "zh_tw": "幫助不幸失事墜落到了奇異星球的機器人重建火箭來回到家鄉吧！普利克帕是一款必須要避開自己發射的彈幕的2D射擊遊戲。\n於華盛頓大學遊戲設計社團2018秋季舉辦的Game Jam中製作的小遊戲。這是我第一次參加Game Jam，也是我第一次真正完成一款遊戲。"
     },
-    "link": "https://dldialogue.xyz/",
+    "link": "https://spectralharp.itch.io/priklepal/",
     "screenshots": [
       "/images/games/priklepal/Screenshot_20211124_083412_735.png",
       "/images/games/priklepal/Screenshot_20211124_083615_200.png"

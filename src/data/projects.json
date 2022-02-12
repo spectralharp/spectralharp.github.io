@@ -1,7 +1,36 @@
 {
+  "portfolio": {
+    "projectImage": "https://personal-page-og.herokuapp.com/",
+    "projectImageSize": { "width": 1200, "height": 630 },
+    "headerSize": "contain",
+    "theme": "transparent",
+    "title": {
+      "en": "Portfolio",
+      "zh_tw": "作品集"
+    },
+    "snippet": {
+      "en": "Recursion?",
+      "zh_tw": "一個遞迴的概念？"
+    },
+    "description": {
+      "en": "Well, you're looking at it right now. Built with React, has a cool background. The design of the page is inspired by Devoid, a game I made in a past game jam \n There has been a few iterations in the design for my personal website over the last few years. I have put all of my past designs in the screenshots below, most are built when I was a teaching assistant at University of Washington. \n Some interesting facts about this website: When you link to it from other places, the open graph image displayed will show the current star chart above the city I'm living in right now.",
+      "zh_tw": "也就是現在這個網頁。採用React框架架設的單頁面靜態網頁，會動的背景受到了我之前的遊戲作品《空無》中藝術風格的影響。\n在最近幾年，我的個人網頁經過了許多的變動。在下方可以看到我曾經使用過的個人頁面設計，大部分都是我在華盛頓大學的網頁入門課程擔任助教時所使用的個人網頁。\n這個網站其實還有個有趣的小秘密：在社群軟體中分享這個頁面的時候，在網頁的預覽圖中可以看到高雄目前正上方的星空喔"
+    },
+    "link": "/",
+    "screenshots": [
+      "/images/projects/portfolio/portfolio_1.png",
+      "/images/projects/portfolio/portfolio_6.png",
+      "/images/projects/portfolio/portfolio_5.png",
+      "/images/projects/portfolio/portfolio_4.png",
+      "/images/projects/portfolio/portfolio_3.png",
+      "/images/projects/portfolio/portfolio_2.png"
+    ],
+    "tags": ["html", "css", "sass", "js", "react"]
+  },
   "timeline": {
-    "projectImage": "/images/projects/timeline/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
-    "headerImage": "/images/projects/timeline/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
+    "projectImage": "/images/projects/timeline/timeline_1.png",
+    "projectImageSize": { "width": 1200, "height": 630 },
+    "headerImage": "/images/projects/timeline/timeline_1.png",
     "theme": "#eee",
     "title": {
       "en": "Timeline",
@@ -9,38 +38,40 @@
     },
     "snippet": {
       "en": "A tool that keeps track of daily events in different time zones",
-      "zh_tw": "龍絆對話畫面生成器"
+      "zh_tw": "用來追蹤不同時區日常行程的工具"
     },
     "description": {
-      "en": "A tool that keeps track of daily events in different time zones",
-      "zh_tw": "龍絆對話畫面生成器"
+      "en": "A tool that keeps track of daily events in different time zones, built with React.",
+      "zh_tw": "一個可以用來追蹤不同時區日常行程的工具。採用React框架架設。"
     },
     "link": "https://spam.bychao.com/timeline",
     "screenshots": [
-      "/images/projects/timeline/Screenshot 2022-02-05 at 20-27-47 Timeline.png",
-      "/images/projects/timeline/Screenshot 2022-02-05 at 20-28-26 Timeline.png"
+      "/images/projects/timeline/timeline_1.png",
+      "/images/projects/timeline/timeline_2.png"
     ],
     "tags": ["html", "sass", "js", "react", "luxon"]
   },
   "dldialogue": {
     "projectImage": "/images/projects/dldialogue/og-thumbnail.png",
-    "headerImage": "/images/projects/dldialogue/Screenshot 2022-01-16 at 14-41-48 Dragalia Lost Dialogue Screen Generator.png",
+    "projectImageSize": { "width": 1200, "height": 630 },
+    "headerImage": "/images/projects/dldialogue/dldialogue_1.png",
     "theme": "#eee",
     "title": {
       "en": "Dragalia Lost Dialogue Screen Generator",
-      "zh_tw": "龍絆對話畫面生成器"
+      "zh_tw": "遊戲對話畫面生成器"
     },
     "snippet": {
       "en": "A tool for making or generating dialogue screens from Dragalia Lost",
-      "zh_tw": "龍絆對話畫面生成器"
+      "zh_tw": "製作《失落的龍絆》中對話畫面的生成器"
     },
     "description": {
-      "en": "A tool for making or generating dialogue screens from Dragalia Lost",
-      "zh_tw": "龍絆對話畫面生成器"
+      "en": "A tool for making or generating dialogue screens from Dragalia Lost, built with React.",
+      "zh_tw": "一個能夠製作失落的龍絆中對話畫面的生成器。採用React框架架設"
     },
     "link": "https://dldialogue.xyz/",
     "screenshots": [
-      "/images/projects/dldialogue/Screenshot 2022-01-16 at 14-41-48 Dragalia Lost Dialogue Screen Generator.png"
+      "/images/projects/dldialogue/dldialogue_2.gif",
+      "/images/projects/dldialogue/dldialogue_1.png"
     ],
     "tags": ["html", "css", "js", "react"]
   }
