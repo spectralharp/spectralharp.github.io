@@ -1,4 +1,5 @@
 @use '../styles/_variables' as var;
+@use '../styles/_global' as glob;
 
 .nav-wrapper {
   position: fixed;
@@ -35,27 +36,33 @@
     border-left: 4px solid var.$light;
     display: flex;
     flex-wrap: wrap;
+  }
 
-    &-item {
-      display: block;
-      font-size: 1.5rem;
-      padding: 0.5rem 0.8rem;
-    }
+  &__link, &__link--active {
+    @extend .bold-link;
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.5rem 0.8rem;
+  }
 
-    &-item::after {
-      transform: translateZ(0);
-      transition: width 0.15s ease-out;
-      display: block;
-      content: '';
-      margin-top: 1px;
-      width: 0%;
-      height: 2px;
-      background-color: #ffe865;
-    }
+  &__link {
+    color: var.$gray;
+  }
 
-    &-item:hover::after {
-      width: 100%;
-    }
+
+
+  &__link::after, &__link--active::after {
+    transition: width 0.15s ease-out;
+    display: block;
+    content: '';
+    margin-top: 1px;
+    width: 0%;
+    height: 2px;
+    background-color: #ffe865;
+  }
+
+  &__link:hover::after, &__link--active:hover::after {
+    width: 100%;
   }
 
   &__menu-toggle {

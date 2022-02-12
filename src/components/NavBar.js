@@ -2,7 +2,7 @@ import './NavBar.scss';
 
 import logo from '../images/logo.svg';
 import i18n from '../data/i18n.json';
-import { Link,} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
@@ -14,9 +14,9 @@ function NavBar({pageLang}) {
   return (
     <div className="nav-wrapper">
       <nav className="nav">
-        <Link to="/">
+        <NavLink to="/">
           <img className="nav__brand" src={logo} alt="logo"/>
-        </Link>
+        </NavLink>
 
         <button
           className="nav__menu-toggle"
@@ -27,34 +27,34 @@ function NavBar({pageLang}) {
         </button>
 
         <ul className={`nav__links ${menuOpen ? "active" : ""}`}>
-          <li className="nav__links-item">
-            <Link
-              className="bold-link"
+          <li>
+            <NavLink
+              className={({ isActive }) => isActive ? 'nav__link--active' : 'nav__link' }
               to="/about"
               onClick={() => setMenuOpen(false)}
             >
               {i18n[pageLang].loc.about}
-            </Link>
+            </NavLink>
           </li>
 
-          <li className="nav__links-item">
-            <Link
-              className="bold-link"
+          <li>
+            <NavLink
+              className={({ isActive }) => isActive ? 'nav__link--active' : 'nav__link' }
               to="/projects"
               onClick={() => setMenuOpen(false)}
             >
               {i18n[pageLang].loc.projects}
-            </Link>
+            </NavLink>
           </li>
 
-          <li className="nav__links-item">
-            <Link
-              className="bold-link"
+          <li>
+            <NavLink
+              className={({ isActive }) => isActive ? 'nav__link--active' : 'nav__link' }
               to="/games"
               onClick={() => setMenuOpen(false)}
             >
               {i18n[pageLang].loc.games}
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
