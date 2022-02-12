@@ -5,36 +5,20 @@ import labelData from '../data/label.json';
 import { Routes, Route, Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 
-function Projects({ title, description, projects, pageLang, route }) {
+function Projects({ title, projects, pageLang, route }) {
   const projectKeys = Object.keys(projects);
 
   const items = projectKeys.map((k) => {
     const project = projects[k];
-
-    const itemBackgroundStyle = {
-      backgroundImage: `url('${project.projectImage}')`,
-      backgroundColor: project.theme
-    };
-
     return (
-      <li
+      <ProjectListItem
         key={k}
-        data-aos='fade-up'
-        className='projects__item'
-      >
-        <Link className='projects__item-link' to={k}>
-          <figure className='projects__item-image' style={itemBackgroundStyle}></figure>
-          <figcaption className='projects__item-info'>
-            <h2 className='projects__item-name title'>
-              {project.title[pageLang]}
-            </h2>
-            <p className='projects__item-description'>
-              {project.snippet[pageLang]}
-            </p>
-          </figcaption>
-        </Link>
-      </li>
+        path={k}
+        project={project}
+        pageLang={pageLang}
+      />
     );
   });
 
@@ -65,6 +49,39 @@ function Projects({ title, description, projects, pageLang, route }) {
   );
 }
 
+function ProjectListItem({path, project, pageLang}) {
+  const [imgLoaded, setImgLoaded] = useState(false);
+  const {width, height} = project.projectImageSize;
+  return (
+    <li
+      data-aos='fade-up'
+      className='projects__item'
+    >
+      <Link className='projects__item-link' to={path}>
+        <img
+          className='projects__item-image'
+          style={imgLoaded ? undefined : { color: 'transparent' }}
+          width={width}
+          height={height}
+          src={project.projectImage}
+          alt={project.title[pageLang]}
+          onLoad={()=>setImgLoaded(true)}
+          onError={()=>setImgLoaded(true)}
+        />
+        <figcaption className='projects__item-info'>
+          <h2 className='projects__item-name title'>
+            {project.title[pageLang]}
+          </h2>
+          <p className='projects__item-description'>
+            {project.snippet[pageLang]}
+          </p>
+        </figcaption>
+      </Link>
+    </li>
+  );
+
+}
+
 function Project({ projects, pageLang, returnRoute }) {
   let { projId } = useParams();
 
@@ -72,7 +89,11 @@ function Project({ projects, pageLang, returnRoute }) {
 
   const screenshots = project.screenshots.map((screenshot, index) => (
     <li key={`${projId}_${index}`}>
-      <img className='project__screenshots-img' src={screenshot} alt={`${project.title[pageLang]} screenshot ${index}`}/>
+      <img
+        className='project__screenshots-img'
+        src={screenshot}
+        alt={`${project.title[pageLang]} screenshot ${index}`}
+      />
     </li>
   ));
 
@@ -88,15 +109,33 @@ function Project({ projects, pageLang, returnRoute }) {
 
     return (
       <li className='project__tag' key={`${projId}_tag_${index}`}>
-        <span className='project__tag-label' style={{backgroundColor: lbl.color}}></span>{lbl.name}
+        <span
+          className='project__tag-label'
+          style={{backgroundColor: lbl.color}}
+        >
+        </span>
+        {lbl.name}
       </li>
     );
   });
 
+  const descriptions = project.description[pageLang].split('\n').map((desc, index) => {
+    return (
+      <p key={`${projId}_desc_${index}`} className='project__description'>{desc}</p>
+    );
+  })
+
   return (
     <section className='project'>
       <header className='project__header'>
-        <div className='project__hero' style={{backgroundImage: `url('${project.headerImage}')`}}>
+        <div
+          className='project__hero'
+          style={{
+            backgroundColor: project.theme,
+            backgroundImage: `url('${project.headerImage}')`,
+            backgroundSize: project.headerSize
+          }}
+        >
           <Link to={returnRoute} className='project__btn-return bold-link'>
             <FontAwesomeIcon icon={faArrowLeft} />
           </Link>
@@ -106,7 +145,7 @@ function Project({ projects, pageLang, returnRoute }) {
       <section className='project__info container'>
         <div className='project__title'>
           <h1 className='project__name'>{project.title[pageLang]}</h1>
-          <a className='project__visit-link bold-link' href={project.link} target='_blank' rel='noreferrer'>
+          <a className='project__visit-link' href={project.link} target='_blank' rel='noreferrer'>
             {i18n[pageLang].loc.linkToProject}&nbsp;<FontAwesomeIcon icon={faExternalLinkAlt} />
           </a>
         </div>
@@ -114,7 +153,7 @@ function Project({ projects, pageLang, returnRoute }) {
           {tags}
         </ul>
         <hr className='project__hr'/>
-        <p className='project__description'>{project.description[pageLang]}</p>
+        {descriptions}
         <ul className='project__screenshots'>
           {screenshots}
         </ul>
