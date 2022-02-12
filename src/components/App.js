@@ -104,10 +104,32 @@ export default function App() {
 function loadLanguage() {
   // Grab the page language
   let savedLang = localStorage.getItem('pageLanguage');
-  // If no saved language or language is not found, default to Chinese
+  // If no saved language or language is not found, try to match navigator language
+  const langMatch = [];
   if (!savedLang || !i18n[savedLang]) {
-    savedLang = 'zh_tw';
+    // Check all possible languages
+    const navLang = navigator.language.toLowerCase();
+    for(let k in i18n) {
+      const bcp47 = i18n[k].bcp47.toLowerCase();
+      // If we get a match break out
+      if(bcp47 === navLang) {
+        savedLang = k;
+        break;
+      // If language is the same we save it fist
+      } else if (bcp47.split('-')[0] === navLang.split('-')[0]) {
+        langMatch.push(k);
+      }
+    }
   }
+  // If we didn't get exact match, try language match, otherwise default to english
+  if (!i18n[savedLang]) {
+    if(langMatch.length > 0) {
+      savedLang = langMatch[0];
+    } else {
+      savedLang = 'en';
+    }
+  }
+
   document.documentElement.lang = i18n[savedLang].bcp47;
   document.title = i18n[savedLang].loc.title;
 
