@@ -5,11 +5,13 @@ import sparkle2 from '../images/sparkle2.png';
 import sparkle3 from '../images/sparkle3.png';
 import sparkle4 from '../images/sparkle4.png';
 
-import { useCallback } from "react";
+import { useCallback, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 let context = null;
 let canvas = null;
 let started = false;
+let renderSoul = true;
 const canvasPos = { x: 0, y: 0 };
 const currentPos = { x: 0, y: 0 };
 const mousePos = { x: 0, y: 0 };
@@ -24,6 +26,13 @@ const sparkles = [];
 window.addEventListener("mousemove", setMousePosition, false);
 
 export default function Home() {
+
+  let location = useLocation();
+
+  useEffect(() => {
+    renderSoul = location.pathname === '/' || location.pathname === '/games/devoid';
+  }, [location])
+
   const canvasRef = useCallback(async node => {
     if(node === null) return;
     canvas = node;
@@ -97,7 +106,6 @@ function updateCanvas(now) {
     }
   }
 
-
   context.canvas.width  = window.innerWidth;
   context.canvas.height = window.innerHeight;
 
@@ -109,12 +117,14 @@ function updateCanvas(now) {
 
   const nextPos = moveTowards(currentPos, mousePos, 4, now, speed, followRadius);
 
-  for (let i = 0; i < trail.length; i++) {
-    drawCircle(trail[i], maxSize * ((i + 1) / trail.length));
-  }
+  if(renderSoul) {
+    for (let i = 0; i < trail.length; i++) {
+      drawCircle(trail[i], maxSize * ((i + 1) / trail.length));
+    }
 
-  drawCircle(nextPos, maxSize);
-  updateTrail(currentPos.x, currentPos.y);
+    drawCircle(nextPos, maxSize);
+    updateTrail(currentPos.x, currentPos.y);
+  }
   currentPos.x = nextPos.x;
   currentPos.y = nextPos.y;
 
@@ -172,10 +182,10 @@ function moveTowards(current, target, maxDistanceDelta, t, s, r) {
 const particles = {};
 const gravity = 0;
 const maxLife = 180;
-const startSize = 0.5;
-const startSizeRandom = -0.25;
+const startSize = 0.3;
+const startSizeRandom = -0.2;
 const spawnTime = 100;
-const maxCount = 80;
+const maxCount = 100;
 
 
 let particleId = 0;
