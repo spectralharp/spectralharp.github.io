@@ -1,5 +1,5 @@
-@use '../styles/_variables' as var;
-@use '../styles/_global' as glob;
+@use "../styles/_variables" as var;
+@use "../styles/_global" as glob;
 
 .nav-wrapper {
   position: fixed;
@@ -20,12 +20,12 @@
   justify-content: flex-start;
   align-items: center;
 
-  height: 4.5rem;
+  height: 60px;
 
   &__brand {
     margin-left: 2rem;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
   &__links {
@@ -38,30 +38,31 @@
     flex-wrap: wrap;
   }
 
-  &__link, &__link--active {
+  &__link,
+  &__link--active {
     @extend .bold-link;
     display: block;
     font-size: 1.5rem;
-    padding: 0.5rem 0.8rem;
+    padding: 0.1rem 0.8rem;
   }
 
   &__link {
     color: var.$gray;
   }
 
-
-
-  &__link::after, &__link--active::after {
+  &__link::after,
+  &__link--active::after {
     transition: width 0.15s ease-out;
     display: block;
-    content: '';
+    content: "";
     margin-top: 1px;
     width: 0%;
     height: 2px;
     background-color: #ffe865;
   }
 
-  &__link:hover::after, &__link--active:hover::after {
+  &__link:hover::after,
+  &__link--active:hover::after {
     width: 100%;
   }
 
@@ -86,11 +87,15 @@
 @media (max-width: 768px) {
   .nav {
     display: block;
-    min-height: 4.5rem;
+    min-height: 60px;
     height: auto;
 
-    &__menu-toggle, &__brand {
-      margin-top: calc((4.5rem - 54px) / 2);
+    &__brand {
+      margin-top: 10px;
+    }
+
+    &__menu-toggle {
+      margin-top: 3px;
     }
 
     &__menu-toggle {
@@ -100,6 +105,11 @@
     &__links {
       display: none;
       margin: 1rem 2rem;
+    }
+
+    &__link,
+    &__link--active {
+      padding: 0.5rem 0.8rem;
     }
 
     &__links.active {

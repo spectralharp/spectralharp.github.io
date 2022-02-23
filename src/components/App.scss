@@ -1,5 +1,5 @@
-@use '../styles/_global';
-@use '../styles/_variables' as var;
+@use "../styles/_global";
+@use "../styles/_variables" as var;
 
 body {
   font-family: var.$content-font-family;
@@ -14,8 +14,12 @@ body {
 
 section p {
   font-size: 1.1rem;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   line-height: 1.75;
+}
+
+a {
+  color: var.$light;
 }
 
 .container {
@@ -30,20 +34,20 @@ section p {
 select {
   display: block;
   width: 100%;
-  padding: .25rem 2.25rem .25rem .5rem;
+  padding: 0.25rem 2.25rem 0.25rem 0.5rem;
   -moz-padding-start: calc(0.75rem - 3px);
-  font-size: .875rem;
+  font-size: 0.875rem;
   font-weight: 400;
   color: var.$dark;
   border: 1px solid var.$light;
 
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
   background-color: var.$light;
   background-size: 16px 12px;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right .75rem center;
+  background-position: right 0.75rem center;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -55,7 +59,7 @@ select {
 select:focus {
   border-color: #279af1;
   outline: 0;
-  box-shadow: 0 0 0 1px #2385cf, 0 0 0 .25rem #279af1;
+  box-shadow: 0 0 0 1px #2385cf, 0 0 0 0.25rem #279af1;
 }
 
 select.language-select {

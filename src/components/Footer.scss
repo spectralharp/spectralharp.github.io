@@ -1,8 +1,8 @@
-@import '../styles/_variables';
+@import "../styles/_variables";
 
 .footer {
-  margin:  1rem 0;
-  padding: 0    1rem;
+  margin: 1rem 0;
+  padding: 0 1rem;
 
   display: flex;
 
@@ -14,13 +14,36 @@
   }
 
   &__social {
-    margin-left: 1rem;
-    padding-left: 1rem;
+    margin: 0 1rem;
+    padding: 0 1rem;
     border-left: 4px solid $light;
+    background-color: $dark;
   }
 
   &__social-link {
     display: block;
     margin: 0.75rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    &__info {
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__social {
+      border-left: 4px solid $light;
+    }
+
+    &__social-link {
+      display: block;
+      margin: 0.75rem 0;
+    }
   }
 }

@@ -1,4 +1,4 @@
-@import '../styles/_variables';
+@import "../styles/_variables";
 
 .home {
   position: relative;
@@ -7,7 +7,6 @@
   overflow: hidden;
 
   &__title {
-
     position: absolute;
     left: 0;
     bottom: 12.5vw;
@@ -18,8 +17,8 @@
 
     transform: rotateZ(-12deg);
 
-
     mix-blend-mode: exclusion;
+    user-select: none;
   }
 
   &__rule {
@@ -27,15 +26,16 @@
     margin-left: -50vw;
     border: none;
     height: 2px;
-    width:  200vw;
+    width: 200vw;
     background-color: $light;
     animation: expand 1s ease;
   }
 
-  &__title-top, &__title-bot {
+  &__title-top,
+  &__title-bot {
     display: block;
 
-    margin:  0;
+    margin: 0;
     padding: 0;
 
     color: $light;
@@ -45,10 +45,12 @@
     transition: color 0.2s ease;
   }
 
-  &__title-bot { animation: right-to-left 1s ease; }
-  &__title-top { animation: left-to-right 1s ease; }
-  &__title-bot:hover, &__title-bot:focus { color: #279af1; }
-  &__title-top:hover, &__title-top:focus { color: #f12796; }
+  &__title-bot {
+    animation: right-to-left 1s ease;
+  }
+  &__title-top {
+    animation: left-to-right 1s ease;
+  }
 
   &__subtitle {
     font-size: 20px;
@@ -57,25 +59,27 @@
 
   &__moon {
     position: fixed;
-    top:  15rem;
+    top: 15rem;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
 
-    width:      75vw;
-    height:     75vw;
-    max-width:  300px;
+    width: 75vw;
+    height: 75vw;
+    max-width: 300px;
     max-height: 300px;
 
     mix-blend-mode: exclusion;
 
-    background-image:    url('../images/moon.png');
+    background-image: url("../images/moon.png");
     background-position: center;
-    background-repeat:   no-repeat;
-    background-size:     contain;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     animation: fade-in 1s ease;
+    user-select: none;
+    pointer-events: none;
+    touch-action: none;
   }
-
 }
 
 @keyframes expand {
