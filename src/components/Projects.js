@@ -2,12 +2,15 @@ import './Projects.scss';
 
 import i18n from '../data/i18n.json';
 import labelData from '../data/label.json';
+import ReactMarkdown from 'react-markdown';
 import { Routes, Route, Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { LanguageContext } from '../context/language-context';
 
-function Projects({ title, projects, pageLang, route }) {
+function Projects({ title, projects, route }) {
+
   const projectKeys = Object.keys(projects);
 
   const items = projectKeys.map((k) => {
@@ -17,7 +20,6 @@ function Projects({ title, projects, pageLang, route }) {
         key={k}
         path={k}
         project={project}
-        pageLang={pageLang}
       />
     );
   });
@@ -36,7 +38,6 @@ function Projects({ title, projects, pageLang, route }) {
   const project = (
     <Project
       projects={projects}
-      pageLang={pageLang}
       returnRoute={route}
     />
   );
@@ -49,40 +50,52 @@ function Projects({ title, projects, pageLang, route }) {
   );
 }
 
-function ProjectListItem({path, project, pageLang}) {
+function ProjectListItem({path, project}) {
+
+  const pageLang = useContext(LanguageContext);
   const [imgLoaded, setImgLoaded] = useState(false);
   const {width, height} = project.projectImageSize;
+  const inner = (
+    <>
+      <img
+      className='projects__item-image'
+      style={ { backgroundColor: project.theme, ...(imgLoaded ? undefined : { color: 'transparent' })}}
+      width={width}
+      height={height}
+      src={project.projectImage}
+      alt={project.title[pageLang.code]}
+      onLoad={()=>setImgLoaded(true)}
+      onError={()=>setImgLoaded(true)}
+      />
+      <figcaption className='projects__item-info'>
+        <h2 className='projects__item-name title'>
+          {project.title[pageLang.code]}
+        </h2>
+        <p className='projects__item-description'>
+          {project.snippet[pageLang.code]}
+        </p>
+      </figcaption>
+    </>
+  );
   return (
     <li
       data-aos='fade-up'
       className='projects__item'
     >
-      <Link className='projects__item-link' to={path}>
-        <img
-          className='projects__item-image'
-          style={imgLoaded ? undefined : { color: 'transparent' }}
-          width={width}
-          height={height}
-          src={project.projectImage}
-          alt={project.title[pageLang]}
-          onLoad={()=>setImgLoaded(true)}
-          onError={()=>setImgLoaded(true)}
-        />
-        <figcaption className='projects__item-info'>
-          <h2 className='projects__item-name title'>
-            {project.title[pageLang]}
-          </h2>
-          <p className='projects__item-description'>
-            {project.snippet[pageLang]}
-          </p>
-        </figcaption>
-      </Link>
+      {
+        project.outward ?
+        <a className='projects__item-link' href={project.link}>{inner}</a>
+        :
+        <Link className='projects__item-link' to={path}>{inner}</Link>
+      }
     </li>
   );
 
 }
 
-function Project({ projects, pageLang, returnRoute }) {
+function Project({ projects, returnRoute }) {
+
+  const pageLang = useContext(LanguageContext);
   let { projId } = useParams();
 
   const project = projects[projId];
@@ -92,7 +105,7 @@ function Project({ projects, pageLang, returnRoute }) {
       <img
         className='project__screenshots-img'
         src={screenshot}
-        alt={`${project.title[pageLang]} screenshot ${index}`}
+        alt={`${project.title[pageLang.code]} screenshot ${index}`}
       />
     </li>
   ));
@@ -119,12 +132,6 @@ function Project({ projects, pageLang, returnRoute }) {
     );
   });
 
-  const descriptions = project.description[pageLang].split('\n').map((desc, index) => {
-    return (
-      <p key={`${projId}_desc_${index}`} className='project__description'>{desc}</p>
-    );
-  })
-
   return (
     <section className='project'>
       <header className='project__header'>
@@ -144,16 +151,23 @@ function Project({ projects, pageLang, returnRoute }) {
       </header>
       <section className='project__info container'>
         <div className='project__title'>
-          <h1 className='project__name'>{project.title[pageLang]}</h1>
+          <h1 className='project__name' style={{borderColor: project.theme === "transparent" ? '' : project.theme}}>
+            {project.title[pageLang.code]}
+          </h1>
           <a className='project__visit-link' href={project.link} target='_blank' rel='noreferrer'>
-            {i18n[pageLang].loc.linkToProject}&nbsp;<FontAwesomeIcon icon={faExternalLinkAlt} />
+            {pageLang.loc.linkToProject}&nbsp;<FontAwesomeIcon icon={faExternalLinkAlt} />
           </a>
         </div>
         <ul className='project__tags'>
           {tags}
         </ul>
         <hr className='project__hr'/>
-        {descriptions}
+        <ReactMarkdown
+          children={project.description[pageLang.code]}
+          components={{
+            p: ({node, ...props}) => <p className='project__description'  {...props} />
+          }}
+        />
         <ul className='project__screenshots'>
           {screenshots}
         </ul>

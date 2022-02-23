@@ -1,14 +1,17 @@
 import './NavBar.scss';
 
 import logo from '../images/logo.svg';
-import i18n from '../data/i18n.json';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { LanguageContext } from '../context/language-context';
 
 
-function NavBar({pageLang}) {
+
+function NavBar() {
+
+  const language = useContext(LanguageContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -27,39 +30,28 @@ function NavBar({pageLang}) {
         </button>
 
         <ul className={`nav__links ${menuOpen ? "active" : ""}`}>
-          <li>
-            <NavLink
-              className={({ isActive }) => isActive ? 'nav__link--active' : 'nav__link' }
-              to="/about"
-              onClick={() => setMenuOpen(false)}
-            >
-              {i18n[pageLang].loc.about}
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              className={({ isActive }) => isActive ? 'nav__link--active' : 'nav__link' }
-              to="/projects"
-              onClick={() => setMenuOpen(false)}
-            >
-              {i18n[pageLang].loc.projects}
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              className={({ isActive }) => isActive ? 'nav__link--active' : 'nav__link' }
-              to="/games"
-              onClick={() => setMenuOpen(false)}
-            >
-              {i18n[pageLang].loc.games}
-            </NavLink>
-          </li>
+          <BarLink to="/about" setMenuOpen={setMenuOpen}>{language.loc.about}</BarLink>
+          <BarLink to="/projects" setMenuOpen={setMenuOpen}>{language.loc.projects}</BarLink>
+          <BarLink to="/games" setMenuOpen={setMenuOpen}>{language.loc.games}</BarLink>
+          <BarLink to="/other" setMenuOpen={setMenuOpen}>{language.loc.other}</BarLink>
         </ul>
       </nav>
     </div>
   );
+}
+
+function BarLink({ children, to, setMenuOpen }) {
+  return (
+    <li>
+      <NavLink
+        className={({ isActive }) => isActive ? 'nav__link--active' : 'nav__link' }
+        to={to}
+        onClick={() => setMenuOpen(false)}
+      >
+        {children}
+      </NavLink>
+    </li>
+  )
 }
 
 export default NavBar;
