@@ -1,26 +1,38 @@
 {
   "en": {
-    "code" : "en_us",
-    "bcp47" : "en",
+    "code": "en",
+    "bcp47": "en",
+    "nativeName": "English",
     "loc": {
-      "title" : "Chao Hsu Lin | Portfolio",
+      "title": "Chao Hsu Lin | Portfolio",
       "about": "About",
       "projects": "Projects",
       "games": "Games",
+      "other": "Other",
       "linkToProject": "Link",
       "homeTitle": "Chao's Portfolio"
+    },
+    "about": {
+      "name": "Chao",
+      "bio": "Hey, I'm Chao! I'm a web developer with 0 years of professional experience in building and maintaining responsive websites. Proficient in HTML, CSS, Javascript and modern frontend frameworks such as React and Vue.js. I also know a little bit about backend technologies such as PHP, Node.js, Flask and MySQL databases. On my off time, I like playing games, and I love making them. My goal for any project is to create memorable experiences, and I seek to achieve this through finding the fun in user experiences.\n\nOh, I also make art and music, you might be here for that."
     }
   },
   "zh_tw": {
-    "code" : "zh_tw",
-    "bcp47" : "zh-TW",
+    "code": "zh_tw",
+    "bcp47": "zh-TW",
+    "nativeName": "繁體中文",
     "loc": {
-      "title" : "林釗緒 | 作品集",
+      "title": "林釗緒 | 作品集",
       "about": "關於我",
       "projects": "作品",
       "games": "遊戲",
+      "other": "其他",
       "linkToProject": "前往作品",
       "homeTitle": "林釗緒的線上作品集"
+    },
+    "about": {
+      "name": "林釗緒",
+      "bio": "華盛頓大學數學系畢業，就學時兼職擔任大學內網頁設計入門課程的助教後對這個不斷變化的領域深深著迷，便開始自學 HTML、CSS、JS 等相關的技能。曾經參與校用作業批改網頁的前端開發工作，使用 Bootstrap 與 Vue.js 顯示評分介面。目前主要使用 React 開發。因為助教工作的關係，對後端使用的 PHP、Node.js 等框架也有些許接觸。閒暇時，我除了喜歡玩遊戲，也喜歡自己開發一些小遊戲，對我來說，沒有什麼是比「為其他人帶來難忘的體驗」更有成就感的。不管是再小的細節也不馬虎，追求完美的體驗是我對自己的期許。"
     }
   }
 }

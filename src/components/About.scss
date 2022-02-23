@@ -1,10 +1,55 @@
-@use '../styles/_variables' as var;
+@use "../styles/_variables" as var;
+
+.info-box {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .about {
   &__profile {
+    position: relative;
+    margin: 50px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      border: 2px dashed var.$light;
+      z-index: -1;
+      animation: expand20 0.8s ease-out forwards;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      border: 2px solid var.$light;
+      z-index: 1;
+      animation: expand45 0.5s ease-out forwards;
+      mix-blend-mode: exclusion;
+      transition: all 0.2s ease-out;
+      pointer-events: none;
+    }
+  }
+
+  &__pfp {
     width: 200px;
     height: 200px;
-    padding: 8px;
-    border: 4px dashed var.$light;
+    filter: grayscale(1);
   }
+}
+
+@keyframes expand45 {
+  from { transform: scale(0); } to { transform: scale(1) rotateZ(45deg); }
+}
+
+@keyframes expand20 {
+  from { transform: scale(0); } to { transform: scale(1) rotateZ(20deg); }
 }
