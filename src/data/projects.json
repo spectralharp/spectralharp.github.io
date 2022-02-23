@@ -9,12 +9,12 @@
       "zh_tw": "作品集"
     },
     "snippet": {
-      "en": "Recursion?",
-      "zh_tw": "一個遞迴的概念？"
+      "en": "A Recursion",
+      "zh_tw": "一個遞迴的概念"
     },
     "description": {
-      "en": "Well, you're looking at it right now. Built with React, has a cool background. The design of the page is inspired by Devoid, a game I made in a past game jam \n There has been a few iterations in the design for my personal website over the last few years. I have put all of my past designs in the screenshots below, most are built when I was a teaching assistant at University of Washington. \n Some interesting facts about this website: When you link to it from other places, the open graph image displayed will show the current star chart above the city I'm living in right now.",
-      "zh_tw": "也就是現在這個網頁。採用React框架架設的單頁面靜態網頁，會動的背景受到了我之前的遊戲作品《空無》中藝術風格的影響。\n在最近幾年，我的個人網頁經過了許多的變動。在下方可以看到我曾經使用過的個人頁面設計，大部分都是我在華盛頓大學的網頁入門課程擔任助教時所使用的個人網頁。\n這個網站其實還有個有趣的小秘密：在社群軟體中分享這個頁面的時候，在網頁的預覽圖中可以看到高雄目前正上方的星空喔"
+      "en": "Well, you're looking at it right now. Built with React, has a cool background. The design of the page is inspired by Devoid, a game I made in a past game jam \n\n There has been a few iterations in the design for my personal website over the last few years. I have put all of my past designs in the screenshots below, most are built when I was a teaching assistant at University of Washington. \n\n Some interesting facts about this website: When you link to it from other places, the open graph image displayed will show the current star chart above the city I'm living in right now.",
+      "zh_tw": "也就是現在這個網頁。採用React框架架設的單頁面靜態網頁，會動的背景受到了我之前的遊戲作品《空無》中藝術風格的影響。\n\n在最近幾年，我的個人網頁經過了許多的變動。在下方可以看到我曾經使用過的個人頁面設計，大部分都是我在華盛頓大學的網頁入門課程擔任助教時所使用的個人網頁。\n\n這個網站其實還有個有趣的小秘密：在社群軟體中分享這個頁面的時候，在網頁的預覽圖中可以看到高雄目前正上方的星空喔"
     },
     "link": "/",
     "screenshots": [
@@ -27,11 +27,62 @@
     ],
     "tags": ["html", "css", "sass", "js", "react"]
   },
+  "weird-flex": {
+    "projectImage": "/images/projects/weird-flex/og-thumbnail.png",
+    "projectImageSize": { "width": 1200, "height": 630 },
+    "headerImage": "/images/projects/weird-flex/weirdflex_1.png",
+    "headerSize": "cover",
+    "theme": "white",
+    "title": {
+      "en": "Weird Flex",
+      "zh_tw": "Weird Flex"
+    },
+    "snippet": {
+      "en": "A flexbox playground",
+      "zh_tw": "一個 Flexbox 的測試工具"
+    },
+    "description": {
+      "en": "Weird Flex is an interactive website that allows you to experiment with different CSS flexbox properties.\n\nI made the [first version](https://bychao.com/weird-flex-classic) of this tool was when I was a teaching assistant for the web design course at University of Washington as a teaching tool for flexbox. I've learned a lot since then and wrote this second version as a practice project.",
+      "zh_tw": "一個可以用來測試 Flexbox 的工具型網頁\n\n之前在華盛頓大學的網頁入門課程擔任助教時為了教學生 Flexbox 的使用方法寫了[第一版](https://bychao.com/weird-flex-classic)的，最近為了練習就寫了一個新的"
+    },
+    "link": "https://bychao.com/weird-flex",
+    "screenshots": [
+      "/images/projects/weird-flex/weirdflex_3.gif",
+      "/images/projects/weird-flex/weirdflex_1.png",
+      "/images/projects/weird-flex/weirdflex_2.png"
+    ],
+    "tags": ["html", "css", "sass", "js", "react"]
+  },
+  "migua": {
+    "projectImage": "/images/projects/migua/og-thumbnail.png",
+    "projectImageSize": { "width": 1200, "height": 630 },
+    "headerImage": "/images/projects/migua/migua_3.png",
+    "theme": "#eee",
+    "title": {
+      "en": "Migua",
+      "zh_tw": "米卦"
+    },
+    "snippet": {
+      "en": "A tool that keeps track of daily events in different time zones",
+      "zh_tw": "用來卜卦的工具"
+    },
+    "description": {
+      "en": "My dad's obsessed with I Ching divination recently, so I made him a website that shows commentaries on the different hexagrams.\n\nI'm not sure if you're can get accurate results from a computer fortune teller though.",
+      "zh_tw": "爸最近很迷易經卜卦，幫他弄個可以簡單看掛的網站。\n\n電腦卜的掛究竟準不準我就不得而知了。"
+    },
+    "link": "https://bychao.com/migua/",
+    "screenshots": [
+      "/images/projects/migua/migua_3.png",
+      "/images/projects/migua/migua_1.png",
+      "/images/projects/migua/migua_2.png"
+    ],
+    "tags": ["html", "css", "js", "vue"]
+  },
   "timeline": {
-    "projectImage": "/images/projects/timeline/timeline_1.png",
+    "projectImage": "/images/projects/timeline/og-thumbnail.png",
     "projectImageSize": { "width": 1200, "height": 630 },
     "headerImage": "/images/projects/timeline/timeline_1.png",
-    "theme": "#eee",
+    "theme": "#32292f",
     "title": {
       "en": "Timeline",
       "zh_tw": "時間線"
@@ -55,7 +106,7 @@
     "projectImage": "/images/projects/dldialogue/og-thumbnail.png",
     "projectImageSize": { "width": 1200, "height": 630 },
     "headerImage": "/images/projects/dldialogue/dldialogue_1.png",
-    "theme": "#eee",
+    "theme": "#eeeeee",
     "title": {
       "en": "Dragalia Lost Dialogue Screen Generator",
       "zh_tw": "遊戲對話畫面生成器"
@@ -65,8 +116,8 @@
       "zh_tw": "製作《失落的龍絆》中對話畫面的生成器"
     },
     "description": {
-      "en": "A tool for making or generating dialogue screens from Dragalia Lost, built with React.",
-      "zh_tw": "一個能夠製作失落的龍絆中對話畫面的生成器。採用React框架架設"
+      "en": "A tool for making or generating dialogue screens from Dragalia Lost, built with React.\n\nThis is probably the project with the most active users, averaging at ~10 users per day (Crazy, I know). It is also my most active project. It's updated frequently enough that I decided to add a version number to each build.\n\nA bit of history to this project: originally, I made the [summon screen generator](https://spam.bychao.com/DLSummonScreenGenerator) to make fake images of summoned characters as a bit of a meme. The project was written in vanilla JS. Later on the [first version of dialogue screen generator](https://spam.bychao.com/DLDialogueScreenGenerator) was created using the same underlying code. It quickly became a bit too overwhelming to handle with just vanilla JS, so I started learning React, and rewrote this project as practice.",
+      "zh_tw": "一個能夠製作《失落的龍絆》中對話畫面的生成器。採用React框架架設。\n\n這應該是我的作品之中使用人數最高的，每天大概有十幾位用戶(很多吧！)。這也是我最常更新的網頁，頻率高到都需要弄個版本號了。\n\n來說一下這個網站的一點歷史：最一開始，我為了做一些迷因製作了款遊戲的[召喚畫面生成器](https://spam.bychao.com/DLSummonScreenGenerator)。當時還是用純粹的JS下去寫的。後來[第一代的生成器](https://spam.bychao.com/DLDialogueScreenGenerator)就重複利用了上個作品的代碼"
     },
     "link": "https://dldialogue.xyz/",
     "screenshots": [
