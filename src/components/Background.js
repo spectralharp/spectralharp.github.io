@@ -30,7 +30,7 @@ export default function Home() {
   let location = useLocation();
 
   useEffect(() => {
-    renderSoul = location.pathname === '/' || location.pathname === '/games/devoid';
+    renderSoul = location.pathname === '/' || location.pathname === '/games/devoid' || location.pathname === '/projects/portfolio';
   }, [location])
 
   const canvasRef = useCallback(async node => {
