@@ -1,0 +1,32 @@
+{
+  "art": {
+    "outward": true,
+    "projectImage": "https://art.bychao.com/images/og-thumbnail.png",
+    "projectImageSize": { "width": 1200, "height": 630 },
+    "theme": "#e4fa08",
+    "title": {
+      "en": "Gallery",
+      "zh_tw": "畫廊"
+    },
+    "snippet": {
+      "en": "A collection of my art",
+      "zh_tw": "可以看看我的畫的圖"
+    },
+    "link": "https://art.bychao.com"
+  },
+  "music": {
+    "outward": true,
+    "projectImage": "https://music.bychao.com/images/og-thumbnail.png",
+    "projectImageSize": { "width": 1200, "height": 630 },
+    "theme": "#232323",
+    "title": {
+      "en": "Jukebox",
+      "zh_tw": "點唱機"
+    },
+    "snippet": {
+      "en": "A collection of music from my games",
+      "zh_tw": "可以聽聽我的幫遊戲做的歌曲"
+    },
+    "link": "https://music.bychao.com"
+  }
+}
