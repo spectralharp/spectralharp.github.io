@@ -26,7 +26,11 @@ function Projects({ title, projects, route }) {
 
   const projectList = (
     <section className='projects container'>
-      <h1 className='projects__title title' key={title}>
+      <h1
+        className='projects__title title'
+        data-aos="fade-right"
+        key={title}
+      >
         {title} : //
       </h1>
       <ul className='projects__list'>

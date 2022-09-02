@@ -23,6 +23,23 @@ const speed = 0.005;
 const trail = [];
 const sparkles = [];
 
+const sparkleSpawner = new ParticleSystem(Particle, {
+  gravity: 0,
+  maxLife: 180,
+  startSize: 0.3,
+  startSizeRandom: -0.2,
+  spawnTime: 100,
+  maxCount: 100
+});
+const lineSpawner = new ParticleSystem(Line, {
+  gravity: 3,
+  maxLife: 40,
+  startSize: 1,
+  startSizeRandom: 0,
+  spawnTime: 3200,
+  maxCount: 2
+});
+
 window.addEventListener("mousemove", setMousePosition, false);
 
 export default function Home() {
@@ -30,9 +47,12 @@ export default function Home() {
   let location = useLocation();
 
   useEffect(() => {
-    renderSoul = location.pathname === '/' || location.pathname === '/games/devoid' || location.pathname === '/projects/portfolio';
-  }, [location])
+    // Only render soul on certain paths
+    renderSoul =
+      location.pathname === '/' || location.pathname === '/games/devoid' || location.pathname === '/projects/portfolio';
+  }, [location]);
 
+  // Grab canvas;
   const canvasRef = useCallback(async node => {
     if(node === null) return;
     canvas = node;
@@ -49,7 +69,13 @@ export default function Home() {
   }, []);
 
   return (
+    <>
     <canvas width='1920' height='1080' ref={canvasRef} aria-hidden></canvas>
+    <div className='plus-grid'>
+    </div>
+    <div className='dot-grid'>
+    </div>
+    </>
   );
 }
 
@@ -88,6 +114,7 @@ function setMousePosition(e) {
 
 let lastTime = null;
 
+// Draw stars
 function updateCanvas(now) {
   if(canvas === null) return;
 
@@ -95,25 +122,16 @@ function updateCanvas(now) {
     lastTime = now;
   }
 
-  if(now >= lastTime) {
-    const dt = now - lastTime;
-    timer += dt;
-    if(timer >= spawnTime) {
-      timer = 0;
-      if(particleCount < maxCount) {
-        new Particle();
-      }
-    }
-  }
+  sparkleSpawner.trySpawn(now);
+  lineSpawner.trySpawn(now);
 
   context.canvas.width  = window.innerWidth;
   context.canvas.height = window.innerHeight;
 
   context.clearRect(0, 0, canvas.width, canvas.height);
 
-  for(let k in particles) {
-    particles[k].draw();
-  }
+  sparkleSpawner.draw();
+  lineSpawner.draw();
 
   const nextPos = moveTowards(currentPos, mousePos, 4, now, speed, followRadius);
 
@@ -127,6 +145,18 @@ function updateCanvas(now) {
   }
   currentPos.x = nextPos.x;
   currentPos.y = nextPos.y;
+
+  context.font = `10px Consolas, monospace`;
+  const info = `> (${mousePos.x.toFixed(2)}, ${mousePos.y.toFixed(2)}) | UNIX / ${Date.now()}`;
+  const infoMetric = context.measureText(info);
+  const infoWidth = infoMetric.width;
+
+  context.fillStyle = 'gray';
+  context.fillText(
+    info,
+    canvas.width - 50 - infoWidth,
+    canvas.height - 110
+  );
 
   lastTime = now;
 
@@ -179,22 +209,43 @@ function moveTowards(current, target, maxDistanceDelta, t, s, r) {
   return nextPos;
 }
 
-const particles = {};
-const gravity = 0;
-const maxLife = 180;
-const startSize = 0.3;
-const startSizeRandom = -0.2;
-const spawnTime = 100;
-const maxCount = 100;
+function ParticleSystem(particle, { gravity, maxLife, startSize, startSizeRandom, spawnTime, maxCount }) {
+  this.particle = particle;
+  this.particles = {};
+  this.gravity = gravity;
+  this.maxLife = maxLife;
+  this.startSize = startSize;
+  this.startSizeRandom = startSizeRandom;
+  this.spawnTime = spawnTime;
+  this.maxCount = maxCount;
 
+  this.particleId = 0;
+  this.timer = 0;
+  this.particleCount = 0;
+}
 
-let particleId = 0;
-let timer = 0;
-let particleCount = 0;
+ParticleSystem.prototype.trySpawn = function(now) {
+  if(now >= lastTime) {
+    const dt = now - lastTime;
+    this.timer += dt;
+    if(this.timer >= this.spawnTime) {
+      this.timer = 0;
+      if(this.particleCount < this.maxCount) {
+        new this.particle(this);
+      }
+    }
+  }
+}
+
+ParticleSystem.prototype.draw = function() {
+  for(let k in this.particles) {
+    this.particles[k].draw(this);
+  }
+}
 
 const avoidRadius = 80;
 
-function Particle() {
+function Particle(ps) {
   if(canvas === null) return;
 
   this.x = Math.random() * canvas.width;
@@ -204,15 +255,15 @@ function Particle() {
   this.vx = 0;
   this.vy = -0.01;
   this.life = 0;
-  this.id = particleId;
+  this.id = ps.particleId;
   this.image = sparkles[Math.floor(Math.random() * sparkles.length)];
-  this.size = startSize + startSizeRandom * Math.random();
-  particles[particleId] = this;
-  particleId++;
-  particleCount++;
+  this.size = ps.startSize + ps.startSizeRandom * Math.random();
+  ps.particles[ps.particleId] = this;
+  ps.particleId++;
+  ps.particleCount++;
 }
 
-Particle.prototype.draw = function() {
+Particle.prototype.draw = function(ps) {
 
   if(withinDist(mousePos, this, avoidRadius)) {
     let dirX = this.x - mousePos.x;
@@ -245,19 +296,84 @@ Particle.prototype.draw = function() {
   this.y += this.vy;
 
   // Adjust for gravity
-  this.vy += gravity;
+  this.vy += ps.gravity;
 
   // Age the particle
   this.life++;
 
   // If Particle is old, remove it
-  if (this.life >= maxLife) {
-    particleCount--;
-    delete particles[this.id];
+  if (this.life >= ps.maxLife) {
+    ps.particleCount--;
+    delete ps.particles[this.id];
   }
 
-  const size = this.size * Math.cos(this.life / maxLife * Math.PI - Math.PI / 2);
+  const size = this.size * Math.cos(this.life / ps.maxLife * Math.PI - Math.PI / 2);
   context.drawImage(this.image, this.x, this.y, this.image.naturalWidth * size, this.image.naturalHeight * size);
+}
+
+function Line(ps) {
+  if(canvas === null) return;
+
+  this.x1 = Math.random() * canvas.width;
+  this.y1 = Math.random() * canvas.height / 2;
+
+  this.x2 = this.x1;
+  this.y2 = this.y1;
+
+  this.vx1 = -60;
+  this.vy1 = 60;
+
+  this.vx2 = -60;
+  this.vy2 = 60;
+
+  this.life = 0;
+  this.id = ps.particleId;
+  this.size = ps.startSize;
+
+  ps.particles[ps.particleId] = this;
+  ps.particleId++;
+  ps.particleCount++;
+}
+
+Line.prototype.draw = function(ps) {
+
+  if (this.life < ps.maxLife / 2) {
+    this.x2 += this.vx2;
+    this.y2 += this.vy2;
+
+    // Adjust for gravity
+    this.vx2 = Math.min(this.vx2 + ps.gravity, 0);
+    this.vy2 = Math.max(this.vy2 - ps.gravity, 0);
+
+  } else {
+    this.x1 += this.vx1;
+    this.y1 += this.vy1;
+
+    // Adjust for gravity
+    this.vx1 = Math.min(this.vx1 + ps.gravity, 0);
+    this.vy1 = Math.max(this.vy1 - ps.gravity, 0);
+  }
+
+
+  // Age the line
+  this.life++;
+
+  // If line is old, remove it
+  if (this.life >= ps.maxLife) {
+    delete ps.particles[this.id];
+    ps.particleCount--;
+  }
+
+  //context.save();
+
+  context.lineWidth = this.size;
+  context.strokeStyle = "#e0e2db";
+  context.beginPath();       // Start a new path
+  context.moveTo(this.x1, this.y1);
+  context.lineTo(this.x2, this.y2);
+  context.stroke();
+
+  //context.restore();
 }
 
 function withinDist(pos1, pos2, distance) {

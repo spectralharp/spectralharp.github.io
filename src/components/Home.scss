@@ -2,20 +2,21 @@
 
 .home {
   position: relative;
+  margin-top: 4.5rem;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 
   &__title {
     position: absolute;
-    left: 0;
-    bottom: 12.5vw;
+    left: 5vw;
+    bottom: 13.5vw;
 
     margin: 0;
 
     line-height: 0.8;
 
-    transform: rotateZ(-12deg);
+    transform: rotateZ(-12deg) translateY(-4.5rem);
 
     mix-blend-mode: exclusion;
     user-select: none;
@@ -39,8 +40,8 @@
     padding: 0;
 
     color: $light;
-    font-size: min(50vh, 30vw);
-    letter-spacing: -2vw;
+    font-size: min(50vh, 25vw);
+    letter-spacing: -1vw;
 
     transition: color 0.2s ease;
   }

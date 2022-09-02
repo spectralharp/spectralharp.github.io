@@ -9,7 +9,10 @@ export default function About() {
 
   return (
     <section className="about container">
-      <h1 className="title">
+      <h1
+        className="title"
+        data-aos="fade-right"
+      >
         {language.loc.about} : //
       </h1>
       <div className='info-box'>

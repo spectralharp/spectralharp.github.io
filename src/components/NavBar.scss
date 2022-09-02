@@ -15,8 +15,8 @@
   margin: 10px;
   margin-bottom: 0;
   padding: 0;
-  border: 4px solid var.$light;
-  border-bottom: 4px dashed var.$light;
+  border: 1px solid var.$light;
+  border-bottom: 2px dashed var.$light;
   justify-content: flex-start;
   align-items: center;
 
@@ -33,7 +33,7 @@
     margin-left: 2rem;
     padding-left: 0.8rem;
     list-style-type: none;
-    border-left: 4px solid var.$light;
+    border-left: 2px solid var.$light;
     display: flex;
     flex-wrap: wrap;
   }

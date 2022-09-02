@@ -46,8 +46,20 @@
   }
 
   &__item-name {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-size: 1.25rem;
+  }
+
+  &__item-name::before {
+    display: inline-block;
+    transition: transform 0.15s ease-out;
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+
+    background: radial-gradient(var.$light 1px, transparent 1px);
+    background-size: 8px 8px;
   }
 
   &__item-name::after {
@@ -57,7 +69,7 @@
     content: "";
     margin-top: 1rem;
     width: 0%;
-    height: 2px;
+    height: 1px;
     background-color: #ffe865;
   }
 
@@ -65,11 +77,17 @@
     width: 100%;
   }
 
+  &__item:hover &__item-name::before {
+    transform: rotateZ(45deg);
+    background: radial-gradient(var.$primary 1px, transparent 1px);
+    background-size: 8px 8px;
+  }
+
   &__item-description {
     font-family: var.$content-font-family;
     text-transform: none;
     font-weight: normal;
-    margin-top: 1rem;
+    margin-top: .5rem;
     font-size: 1rem;
   }
 }
